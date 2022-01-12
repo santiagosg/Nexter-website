@@ -31,15 +31,8 @@ body {
       grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
-.sidebar,
 .header,
-.realtors,
-.features,
-.story__pictures,
-.story__content,
-.houses,
-.gallery,
-footer {
+.realtors {
   border: 1.5rem solid #ccc;
   outline: 1px solid #938e8e;
 }
@@ -429,6 +422,126 @@ footer {
 .sidebar {
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1;
+  background-color: #c69963;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sidebar__toggle {
+  height: 21px;
+  width: 3.5rem;
+  cursor: pointer;
+  z-index: 4;
+  position: fixed;
+  margin-top: 4rem;
+}
+
+.sidebar__btn {
+  border: none;
+  border-radius: 0;
+  background-color: #f9f7f6;
+  height: 2px;
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.sidebar__btn::before, .sidebar__btn::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 3.5rem;
+  background-color: #f9f7f6;
+}
+
+.sidebar__btn::before {
+  -webkit-transform: translateY(-0.8rem);
+          transform: translateY(-0.8rem);
+}
+
+.sidebar__btn::after {
+  -webkit-transform: translateY(0.6rem);
+          transform: translateY(0.6rem);
+}
+
+.sidebar__menu {
+  position: fixed;
+  height: 100vh;
+  left: -40rem;
+  background-color: #c69963;
+  width: 34rem;
+  z-index: 3;
+  -webkit-transition: left 0.3s linear;
+  transition: left 0.3s linear;
+}
+
+.sidebar__menu--show {
+  left: 0;
+}
+
+.sidebar__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  height: 70vh;
+  margin-top: 15vh;
+  margin-bottom: auto;
+  padding: 0 3rem;
+}
+
+.sidebar__item {
+  list-style: none;
+}
+
+.sidebar__link, .sidebar__link:link, .sidebar__link:visited {
+  display: block;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #f9f7f6;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 2px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.sidebar__link:hover, .sidebar__link:active {
+  color: #54483A;
+  -webkit-transform: translateX(1rem);
+          transform: translateX(1rem);
+}
+
+.sidebar__link:after {
+  content: "";
+  background-color: #f9f7f6;
+  height: 1px;
+  width: 20rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar__link:hover:after, .sidebar__link:active:after {
+  background-color: #54483A;
+  width: 25rem;
 }
 
 .story__pictures {

@@ -1,4 +1,109 @@
 .sidebar {
-    grid-column: sidebar-start / sidebar-end;
-    grid-row: 1 / -1;
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / -1;
+  background-color: $color-primary;
+  display: flex;
+  justify-content: center;
+
+  &__toggle {
+    height: 21px;
+    width: 3.5rem;
+    cursor: pointer;
+    z-index: 4;
+    position: fixed;
+    margin-top: 4rem;
+  }
+
+  &__btn {
+    border: none;
+    border-radius: 0;
+    background-color: $color-grey-light-1;
+    height: 2px;
+    width: 2.5rem;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 3.5rem;
+      background-color: $color-grey-light-1;
+    }
+
+    &::before {
+      transform: translateY(-0.8rem);
+    }
+    &::after {
+      transform: translateY(0.6rem);
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    height: 100vh;
+    left: -40rem;
+    background-color: #c69963;
+    width: 34rem;
+    z-index: 3;
+    transition: left 0.3s linear;
+
+    &--show {
+      left: 0;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    height: 70vh;
+    margin-top: 15vh;
+    margin-bottom: auto;
+    padding: 0 3rem;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link,
+  &__link:link,
+  &__link:visited {
+    display: block;
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: $color-grey-light-1;
+    font-family: $font-display;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+
+  &__link:hover,
+  &__link:active {
+    color: $color-grey-dark-1;
+    transform: translateX(1rem);
+  }
+
+  &__link:after {
+    content: "";
+    background-color: $color-grey-light-1;
+    height: 1px;
+    width: 20rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__link:hover:after,
+  &__link:active:after {
+    background-color: $color-grey-dark-1;
+    width: 25rem;
+  }
 }
