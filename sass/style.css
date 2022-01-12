@@ -156,6 +156,51 @@ footer {
 
 .footer {
   grid-column: full-start / full-end;
+  padding: 8rem;
+  background-color: #101d2c;
+}
+
+.nav {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__link, .nav__link:link, .nav__link:visited {
+  display: block;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #f9f7f6;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 2px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.nav__link:hover, .nav__link:active {
+  text-decoration: overline;
+  color: #c69963;
+  -webkit-transform: translateY(-0.4rem);
+          transform: translateY(-0.4rem);
+}
+
+.copyright {
+  font-size: 1.4rem;
+  text-align: center;
+  color: #aaa;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6rem;
 }
 
 .gallery {
