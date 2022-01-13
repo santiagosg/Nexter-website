@@ -331,7 +331,7 @@ body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 29, 44, 0.93)), to(rgba(16, 29, 44, 0.93))), url(../img/hero.jpeg);
   background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
   background-size: cover;
-  background-position: center;
+  background-position: center left;
   padding: 4rem 8rem 8rem 8rem;
   display: -ms-grid;
   display: grid;
@@ -486,6 +486,43 @@ body {
 
 .realtors {
   grid-column: col-start 7 / full-end;
+  background-color: #101d2c;
+  padding: 3rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  row-gap: 2rem;
+}
+
+.realtors__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: min-content max-content;
+      grid-template-columns: -webkit-min-content -webkit-max-content;
+      grid-template-columns: min-content max-content;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  row-gap: 5vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.realtors__img {
+  width: 7rem;
+  border-radius: 50%;
+  display: block;
+}
+
+.realtors__sold {
+  color: #aaa;
+  text-transform: uppercase;
+  margin-top: -3px;
 }
 
 .sidebar {
@@ -615,8 +652,9 @@ body {
 
 .story__pictures {
   grid-column: full-start / col-end 4;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(198, 153, 99, 0.5)), to(rgba(198, 153, 99, 0.5))), url(/img/back.jpg);
-  background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url(/img/back.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(198, 153, 99, 0.5)), to(rgba(198, 153, 99, 0.5))), url(../img/back.jpg);
+  background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url(../img/back.jpg);
+  background-size: cover;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[6];
