@@ -33,10 +33,30 @@
     }
   }
 
+  &__figure {
+    width: 7rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8rem;
+      height: 8rem;
+      border: 2px dashed #c69963;
+      border-radius: 50%;
+      animation: spin 15s infinite linear;
+    }
+  }
+
   &__img {
     width: 7rem;
     border-radius: 50%;
-    display: block;
   }
 
   &__details {
